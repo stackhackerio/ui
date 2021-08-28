@@ -1,4 +1,4 @@
-import Article from './Article'
+import Article from '../../components/Article'
 import * as ArticleList from './ArticleList.stories'
 
 const component = {

@@ -9,3 +9,11 @@ export default function Articles({ articles }) {
     </>
   )
 }
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      articles: [],
+    },
+  }
+}

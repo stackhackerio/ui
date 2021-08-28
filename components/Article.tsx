@@ -1,13 +1,11 @@
+import Image from 'next/image'
+
 export default function Article({ article }) {
   return (
-    <div
-      className="flex flex-col pt-2 w-full border-b"
-      style={{ letterSpacing: -0.000001 }}
-    >
+    <div className="flex flex-col pt-2 w-full border-b">
       <a
         className="no-underline cursor-pointer hover:no-underline"
         href="/guides/using-express-with-vercel"
-        style={{ letterSpacing: -0.000001 }}
       >
         <article className="flex relative justify-between py-6 px-0 w-full text-black cursor-pointer">
           <div className="">
@@ -23,9 +21,9 @@ export default function Article({ article }) {
             <div className="flex -space-x-1 items-center w-auto">
               {article.users.map((user) => {
                 return (
-                  <span className="inline-flex items-center">
+                  <span key={article.id} className="inline-flex items-center">
                     <span className="inline-block overflow-hidden flex-shrink-0 w-6 h-6 align-top rounded-full">
-                      <img
+                      <Image
                         key={user.id}
                         alt="okbel"
                         title="okbel"
@@ -33,16 +31,15 @@ export default function Article({ article }) {
                         width="24"
                         height="24"
                         className="w-full h-full opacity-100"
-                        style={{ transition: "opacity 0.2s ease-in 0s" }}
                       />
                     </span>
                   </span>
-                );
+                )
               })}
             </div>
           </div>
         </article>
       </a>
     </div>
-  );
+  )
 }

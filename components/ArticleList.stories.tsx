@@ -1,56 +1,55 @@
-import ArticleList from "./ArticleList";
+import ArticleList from './ArticleList'
 
-export default {
+const component = {
   component: ArticleList,
-  title: "components/ArticleList",
-};
-const Template = (args) => <ArticleList {...args} />;
+  title: 'components/ArticleList',
+}
+const Template = (args) => <ArticleList {...args} />
 
 const users = [
   {
     id: 1,
-    avator:
-      "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    avator: '/avator1.jpg',
   },
   {
     id: 2,
-    avator:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80",
+    avator: '/avator2.jpg',
   },
   {
     id: 3,
-    avator:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    avator: '/avator3.jpg',
   },
-];
+]
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   articles: [
     {
       id: 1,
-      title: "Using Express.js with Vercel",
-      description: "Learn how to use Express.js in a Serverless environment.",
+      title: 'Using Express.js with Vercel',
+      description: 'Learn how to use Express.js in a Serverless environment.',
       users: [users[0], users[1]],
     },
     {
       id: 2,
-      title: "Deploying a Static Nuxt.js App with Vercel",
-      description: "Create and deploy your static Nuxt.js app with Vercel.",
+      title: 'Deploying a Static Nuxt.js App with Vercel',
+      description: 'Create and deploy your static Nuxt.js app with Vercel.',
       users: [users[1], users[2]],
     },
     {
       id: 3,
-      title: "Getting Started with Next.js and Vercel",
-      description: "Create a Next.js app and deploy it with Vercel.",
+      title: 'Getting Started with Next.js and Vercel',
+      description: 'Create a Next.js app and deploy it with Vercel.',
       users: [users[1]],
     },
     {
       id: 4,
-      title: "Deploy a React App with Vercel and Create React App",
+      title: 'Deploy a React App with Vercel and Create React App',
       description:
-        "Create your Create React App project and deploy it with Vercel.",
+        'Create your Create React App project and deploy it with Vercel.',
       users: [users[0], users[1], users[2]],
     },
   ],
-};
+}
+
+export default component

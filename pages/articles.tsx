@@ -1,5 +1,5 @@
-import Head from "../components/Head";
-import ArticleList from "../components/ArticleList";
+import Head from '../components/Head'
+import ArticleList from '../components/ArticleList'
 
 export default function Articles({ articles }) {
   return (
@@ -7,5 +7,5 @@ export default function Articles({ articles }) {
       <Head />
       <ArticleList articles={articles} />
     </>
-  );
+  )
 }
